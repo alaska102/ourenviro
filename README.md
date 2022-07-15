@@ -77,11 +77,20 @@ Stretch: The app goes deeper, pulling from environmental data to visualize the a
 
 ## Schema
 ### Models
-#### Post
+#### Org
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the non-profit |
+   | nonprofitID      | String   | unique id for the non-profit |
+
+#### User
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userName      | String   | unique id for the username |
+   | password      | String   | passwords for each user |
+   | likedOrg      | vec[Org]   | list of saved organizations that a user liked |
+
+
 
 ### Networking
 #### List of network requests by screen
@@ -90,8 +99,7 @@ Stretch: The app goes deeper, pulling from environmental data to visualize the a
       - (Delete) Delete existing save
    - Profile Screen
       - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
-   s
+      - (Update/PUT) Update user profile images
 #### [OPTIONAL:] Existing API Endpoints
 
 ##### Non-Profit API
