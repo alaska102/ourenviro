@@ -68,9 +68,6 @@ Stretch: User can save different trips they plan on taking
 ## Wireframes
 <img src="capstone.png" width=800><br>
 
-### [BONUS] Digital Wireframes & Mockups
-<img src="capstone2.png" height=200>
-
 
 ## Schema
 ### Models
