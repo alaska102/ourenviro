@@ -1,6 +1,6 @@
 # HAILEY GARCIA CAPSTONE PROJECT README
 
-# Our Environmentalism
+# Carbon Calc
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -10,45 +10,41 @@
 
 ## Overview
 ### Description
-Core: Our Environmentalism is an educational web app that provides people with information about different non-profit organizations focused on environmentalism in their area. The user is able to sign up and save different organizations so they can come back and learn more about them.
-Stretch: The app goes deeper, pulling from environmental data to visualize the amount of environmental pollutants in a certain area.
+Core: Users can enter their cars miles per gallon and their view their trip + trip distance using Google Maps SDK. There, their carbon footprint is calculated. Their different cars are stored on the backend so they can login and reuse the same car.
+
+Stretch: User can save different trips they plan on taking
 
 ### App Evaluation
 - **Category:** Educational
 - **Mobile:** This app would be primarily developed for web applications and work optimally on laptop/desktops but it would still work on mobile devices.
-- **Story:** Provides users with a mapping tool to look at environmental data + non-profits to save in that area.
+- **Story:** Provides users with a mapping tool to look at their carbon footprint with driving trips they normally take.
 - **Market:** This is primarilly geared towards Gen-Z and Milenials but anyone could use it.
-- **Habit:** This application would not be a daily use application, rather users would look at it when they are feeling inspired to support climate justice.
-- **Scope:** At it's core, the application is just providing information about environmental justice & different organizations people can connect to to take action. However, this could expand to have more interactivity, with nonprofits posting certain events.
-
+- **Habit:** This application would not be a daily use application, rather users would look at it when they are curious about their carbon footprint.
+- **Scope:** At it's core, the application is just providing information about how driving is impacting the environment.
 ## Product Spec
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
 
-* User logs in to access saved nonprofits
-* User can open a mapping tool where when they click on a location, surrounding environmental non-profits popup
-* Users can search by area
-* Saved non-profit page, lists out different nonprofits
-* Settings (Accesibility, Notification, General, etc.)
+* User logs in to create & save car objects with car name & MPG.
+* User can open a mapping tool where they can look up trips they normally take on google maps.
+* From that page, the carbon footprint pops up
+* Saved cars page
+* About page -> more info about carbon crisis
 
 **Optional Nice-to-have Stories**
 
-* Mapping page loads environmental data so you can sort by most environmentally burdeded communities
-* Mapping page loads Census data to sort by communities of color, education level, poverty level
+* Saved trips to look at easily again.
 
 ### 2. Screen Archetypes
 
 * Login
 * Register - User signs up or logs into their account
-* Mapping screen - California map with search bar to search by location
-   * Upon selecting different nonprofits in that area pop up
+* Mapping screen - Google map where they can look up a trip, with sidenav bar to pick a car object to calculate carbon footprint
 * Profile Screen
    * Allows user to upload a photo and put in their information
-* Saved Nonprofits Screeen.
-   * Allows user to access the non-profits they had previously saved.
-* Settings Screen
-   * Lets people change language, and app notification settings.
+* About Screen
+   * More info about carbon crisis.
 
 ### 3. Navigation
 
@@ -61,12 +57,13 @@ Stretch: The app goes deeper, pulling from environmental data to visualize the a
 **NavBar Navigation - logged in**
 * About
 * Map
-* Saved
+* Vehicles
 * Profile
 
 **Flow Navigation**
 * Forced Log-in -> Account creation if no log in is available
 * Map -> Opens Map
+* Vehicles -> user vehicles
 
 ## Wireframes
 <img src="capstone.png" width=800><br>
@@ -77,38 +74,27 @@ Stretch: The app goes deeper, pulling from environmental data to visualize the a
 
 ## Schema
 ### Models
-#### Org
-
-   | Property      | Type     | Description |
-   | ------------- | -------- | ------------|
-   | nonprofitID      | String   | unique id for the non-profit |
-
 #### User
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | userName      | String   | unique id for the username |
    | password      | String   | passwords for each user |
-   | likedOrg      | vec[Org]   | list of saved organizations that a user liked |
+   | vehicle      | vehicle   | vehicle object for each car the user has |
+   | carName      | String   | vehicle name |
+   | milesPerGallon | Float   | miles per gallon that specific vehicle gets |
+
+
 
 
 
 ### Networking
 #### List of network requests by screen
-   - Map Screen
-      - (Create/POST) Create a save on a post
-      - (Delete) Delete existing save
+   - Vehicles (or Maps) Screen
+      - (Create/POST) Create a vehicle object (w/ carName - String and milesPerGallon - float )
+      - (Delete) Delete existing vehicle
    - Profile Screen
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile images
 #### [OPTIONAL:] Existing API Endpoints
 
-##### Non-Profit API
-- Base URL - [https://projects.propublica.org/nonprofits/api/v2](https://projects.propublica.org/nonprofits/api/v2)
-
-   HTTP Verb | Endpoint | Description
-   ----------|----------|------------
-    `GET`    | /name | Organization name, as provided by the IRS
-    `GET`    | /city | return cities
-    `GET`    | /state   | return states (will filter out anything not CA)
-    `GET`    | /zipcode | return zipcode
-    `GET`    | /guidestar_url | A link to the GuideStar profile for this organization.
+##### Google Maps API
