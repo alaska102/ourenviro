@@ -25,6 +25,7 @@ export default function App() {
   const [map, setMap] = useState(/** @type google.maps.Map */ (null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState("")
+  const [carbonFootprint, setCarbonFootprint] = useState("")
   const originRef = useRef()
   const destinationRef = useRef()
 
@@ -44,6 +45,7 @@ export default function App() {
     })
     setDirectionsResponse(results)
     setDistance(results.routes[0].legs[0].distance.text)
+    calculateCarbonFootprint(results.routes[0].legs[0].distance.text)
   } 
 
   function clearRoute() {
@@ -54,8 +56,8 @@ export default function App() {
     window.location.reload(true)
   }
 
-  function calculateCarbonFootprint() {
-
+  function calculateCarbonFootprint(distance) {
+    setCarbonFootprint(parseFloat(distance.split('[')[0])+milesPerGallon)
   }
 
   return (
@@ -109,7 +111,7 @@ export default function App() {
         </HStack>
         <HStack spacing={4} mt={4} justifyContent='space-between'>
           <Text>Distance: {distance} </Text>
-          <Text>Carbon Footprint: </Text>
+          <Text>Carbon Footprint: {carbonFootprint}</Text>
           <IconButton
             aria-label='center back'
             icon={<FaLocationArrow />}
