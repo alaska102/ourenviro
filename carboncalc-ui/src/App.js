@@ -57,7 +57,9 @@ export default function App() {
   }
 
   function calculateCarbonFootprint(distance) {
-    setCarbonFootprint(parseFloat(distance.split('[')[0])+milesPerGallon)
+    let gallons = parseFloat(distance.split('[')[0])/milesPerGallon
+    let footprint = gallons * 8.887
+    setCarbonFootprint(footprint + ' kg CO2')
   }
 
   return (
