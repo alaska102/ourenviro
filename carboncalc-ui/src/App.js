@@ -42,6 +42,7 @@ export default function App() {
       origin: originRef.current.value,
       destination: destinationRef.current.value,
       travelMode: 'DRIVING',
+      unitSystem: window.google.maps.UnitSystem.IMPERIAL,
     })
     setDirectionsResponse(results)
     setDistance(results.routes[0].legs[0].distance.text)
@@ -51,6 +52,7 @@ export default function App() {
   function clearRoute() {
     setDirectionsResponse(null)
     setDistance('')
+    setCarbonFootprint('')
     originRef.current.value = ''
     destinationRef.current.value = ''
     window.location.reload(true)
@@ -59,7 +61,7 @@ export default function App() {
   function calculateCarbonFootprint(distance) {
     let gallons = parseFloat(distance.split('[')[0])/milesPerGallon
     let footprint = gallons * 8.887
-    setCarbonFootprint(footprint + ' kg CO2')
+    setCarbonFootprint(footprint.toFixed(2) + ' kg CO2')
   }
 
   return (
