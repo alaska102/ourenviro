@@ -9,7 +9,7 @@
 
 }
 
-.home-container {
+.home {
     background-color: #E6EBE0;
     height:100vh;
 }
@@ -19,7 +19,7 @@
     font-weight: bolder;
     text-align: left;
     left: 80px;
-    top: 40px;
+    top: 64px;
     padding-bottom: 0px;
     margin-bottom: 0px;
     position: absolute;

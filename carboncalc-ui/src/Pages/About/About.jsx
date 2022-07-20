@@ -3,6 +3,6 @@ import './About.css';
 
 export default function About() {
     return (
-        x
+        <div className='about'>Wooohooo</div>
     );
 }

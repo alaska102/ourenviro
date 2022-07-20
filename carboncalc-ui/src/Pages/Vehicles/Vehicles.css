@@ -4,7 +4,7 @@ body {
     margin: 2rem;
 }
 
-.wrapper {
+.vehicles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmix(12rem, 16rem));
     gap: 2rem;
