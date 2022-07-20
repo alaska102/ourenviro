@@ -13,9 +13,10 @@
 import * as React from 'react';
 import Maptool from './Pages/Maptool/Maptool';
 import Home from './Pages/Home/Home';
+import Footer from './Components/Footer/Footer';
 
 export default function App() {
   return (
-    <Home />
+    <Footer />
   );
 }
