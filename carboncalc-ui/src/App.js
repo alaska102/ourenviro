@@ -16,9 +16,15 @@ import Home from './Pages/Home/Home';
 import Footer from './Components/Footer/Footer';
 import SignIn from './Pages/SignIn/SignIn';
 import SignUp from './Pages/SignUp/SignUp';
+import Vehicles from './Pages/Vehicles/Vehicles';
 
 export default function App() {
+  const milesPerGallon= 20;
+  const carName="Hailey's Car";
   return (
-    <SignIn />
+    <Vehicles
+    carName={carName}
+    milesPerGallon={milesPerGallon}
+    />
   );
 }
