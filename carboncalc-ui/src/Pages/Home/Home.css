@@ -1,44 +1,44 @@
 .bg-img {
     background-image: url("https://images.unsplash.com/photo-1607432750402-48f85c94f63a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    height: 500px;
+    height: 70vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: grid;
     place-items: center;
+    opacity: .8;
 
 }
 
 .home {
     background-color: #f8fafc;
-    height:100vh;
 }
 
 .bg-text {
-    color:white;
+    background-color: rgb(255,255,255,.9);
+    color:black;
     font-weight: bolder;
     text-align: left;
     left: 80px;
-    top:-280px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    top:-440px;
+    padding: 64px 30px 48px 30px;
     position: relative;
     height: fit-content;
-    font-size: 6.5em;
-    text-shadow: 0 0 55px black;
+    font-size: 5em;
     font-family: 'Helvetica Neue';
-    max-width: 680px;
-    line-height: 36px;
-
+    max-width: 480px;
+    line-height: 68px;
+    border-radius: 40px;
+    box-shadow: inset;
 }
 
 .bg-detail-text {
+    color: #75704E;
     top: 0px;
-    color:white;
     position: relative;
     font-style: normal;
     font-weight: lighter;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 28px;
 
 }
