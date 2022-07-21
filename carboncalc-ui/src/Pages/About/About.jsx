@@ -3,6 +3,8 @@ import './About.css';
 
 export default function About() {
     return (
-        <div className='about'>Wooohooo</div>
+        <div className='about'>
+
+        </div>
     );
 }
