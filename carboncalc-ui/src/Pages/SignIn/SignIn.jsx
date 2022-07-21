@@ -9,7 +9,6 @@ import {
     Link,
     Button,
     Heading,
-    Text,
     useColorModeValue,
   } from '@chakra-ui/react';
   
@@ -44,14 +43,13 @@ import {
                   direction={{ base: 'column', sm: 'row' }}
                   align={'start'}
                   justify={'space-between'}>
-                  <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
+                  <Checkbox colorScheme='brand'>Remember me</Checkbox>
                 </Stack>
                 <Button
-                  bg={'blue.400'}
+                  bg={'#A7CECB'}
                   color={'white'}
                   _hover={{
-                    bg: 'blue.500',
+                    bg: '#8BA6A9',
                   }}>
                   Sign in
                 </Button>

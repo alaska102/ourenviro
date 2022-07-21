@@ -13,6 +13,7 @@ import {
     Text,
     useColorModeValue,
     Link,
+    UnorderedList,
   } from '@chakra-ui/react';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
@@ -76,17 +77,17 @@ import {
                 <Button
                   loadingText="Submitting"
                   size="lg"
-                  bg={'blue.400'}
+                  bg={'#A7CECB'}
                   color={'white'}
                   _hover={{
-                    bg: 'blue.500',
+                    bg: '#8BA6A9',
                   }}>
                   Sign up
                 </Button>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
-                  Already a user? <ReactLink to="/signin" color={'blue.400'}>Sign In</ReactLink>
+                  Already a user? <ReactLink to="/signin" style={{color:'#8BA6A9', textDecoration:'underline'}}>Sign In</ReactLink>
                 </Text>
               </Stack>
             </Stack>
