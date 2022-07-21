@@ -89,7 +89,7 @@ export default function Maptool() {
       <Box
         p={4}
         borderRadius='lg'
-        mt={20}
+        my={28}
         bgColor='white'
         shadow='base'
         minW='container.md'

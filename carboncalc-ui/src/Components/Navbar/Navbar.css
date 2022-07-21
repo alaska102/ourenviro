@@ -2,7 +2,7 @@
     color: #75704E;
     height: 92px;
     background-color: white;
-    position: fixed;
+    position: absolute;
     z-index: 500;
     border-bottom: 12px solid #A7CECB;
     width: 100vw;
@@ -16,15 +16,15 @@
   }
 
   .container {
+    width: 100vw;
     display: flex;
-    width: 50vw;
     justify-content: space-evenly;
-    float: right;
 
   }
   .nav-link {
     font-weight: 550;
     cursor: pointer;
+    
   }
   
   .nav-content {
@@ -32,7 +32,6 @@
     display: flex;
     cursor: pointer;
     align-items: center;
-
   }
 
 

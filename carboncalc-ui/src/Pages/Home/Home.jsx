@@ -8,7 +8,7 @@ export default function Home() {
             <div className='bg-img'>
             </div>
             <div className='bg-text'>Carbon Calc
-            <div className='bg-detail-text'> Greenhouse gases from transportation account for 27% of total US greenhouse gas emissions, check how much carbon your trip takes! </div>
+            <div className='bg-detail-text'> <br></br>Greenhouse gases from transportation account for 27% of total US greenhouse gas emissions, check how much carbon your trip takes! </div>
             </div>
             <About />
         </div>
