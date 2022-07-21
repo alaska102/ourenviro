@@ -78,7 +78,7 @@ export default function Maptool() {
           center={center} 
           zoom={10} 
           mapContainerStyle={{width: '100%', height: '100%'}}
-          options={{fullscreenControl: false, streetViewControl: false, mapTypeControl: false}}
+          options={{fullscreenControl: false, streetViewControl: false, mapTypeControl: false, zoomControl: false}}
           onLoad={map => setMap(map)}
           >
           <Marker position={center} />
@@ -89,13 +89,13 @@ export default function Maptool() {
       <Box
         p={4}
         borderRadius='lg'
-        mt={4}
+        mt={20}
         bgColor='white'
         shadow='base'
         minW='container.md'
         zIndex='2'
       >
-        <HStack spacing={4}>
+        <HStack spacing={4} mt={4} justifyContent='space-between'>
           <Autocomplete>
             <Input type='text' placeholder='Origin' ref={originRef} zIndex='100'/>
           </Autocomplete>
@@ -103,12 +103,12 @@ export default function Maptool() {
           <Input type='text' placeholder='Destination' ref={destinationRef} zIndex='100'/>
           </Autocomplete>
           <ButtonGroup>
-            <Button colorScheme='blue' type='submit' onClick={calculateRoute}>
+            <Button color='#8BA6A9' type='submit' onClick={calculateRoute}>
               Calculate Route
             </Button>
             <IconButton
               aria-label='center back'
-              icon={<FaTimes />}
+              icon={<FaTimes color='#8BA6A9'/>}
               onClick={clearRoute}
             />
           </ButtonGroup>
@@ -118,7 +118,7 @@ export default function Maptool() {
           <Text>Carbon Footprint: {carbonFootprint}</Text>
           <IconButton
             aria-label='center back'
-            icon={<FaLocationArrow />}
+            icon={<FaLocationArrow color='#8BA6A9'/>}
             isRound
             onClick={() => map.panTo(center)}
           />

@@ -2,6 +2,7 @@ body {
     justify-content: center;
     font-family: 'Helvetica Neue';
     margin: 2rem;
+    
 }
 
 .vehicles {
@@ -9,6 +10,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmix(12rem, 16rem));
     gap: 2rem;
     justify-content: center;
+    min-height: 100vh;
+
 }
 
 .card {

@@ -1,26 +1,39 @@
 .navbar {
-    width: 100%;
     color: #75704E;
-    height: 70px;
-    display: flex;
+    height: 92px;
     background-color: white;
-    padding: 0 40px;
     position: fixed;
+    z-index: 500;
+    border-bottom: 12px solid #A7CECB;
+    width: 100vw;
+    display: flex;
+
   }
+
+  .logo{
+    max-width: 92px;
   
+  }
+
+  .container {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    float: right;
+
+  }
   .nav-link {
     font-weight: 550;
-    width: 100%;
-    margin-left: 50px;
     cursor: pointer;
   }
   
   .nav-content {
-    max-width: 1400px;
-    padding-left: 150px;
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100vw;
     display: flex;
-    flex-direction: row;
+    cursor: pointer;
     align-items: center;
+
   }
+
+
+  

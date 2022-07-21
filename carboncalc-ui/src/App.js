@@ -19,6 +19,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import Vehicles from './Pages/Vehicles/Vehicles';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contact from './Pages/Contact/Contact';
 
 export default function App() {
   const milesPerGallon= 20;
@@ -66,6 +67,12 @@ export default function App() {
             <SignUp />
           } >
           </Route>
+
+          <Route path="/contact" element={
+            <Contact />
+          } >
+          </Route>
+
           </Routes>
 
 
