@@ -12,7 +12,23 @@
 ### Description
 Core: Users can enter their cars miles per gallon and their view their trip + trip distance using Google Maps SDK. There, their carbon footprint is calculated. Their different cars are stored on the backend so they can login and reuse the same car.
 
-Stretch: User can save different trips they plan on taking
+Improving technical complexity + stretch ideas: 
+- Each car icon has a color from the theme colors, randomly selected:
+    - Colors: string array of color options
+        - Use math.rand to pick which element of the array 
+            - Check if the color has already been used:
+                - If not, assign to the icon color
+- Using a vehicle API
+    - User can enter in their car type, make/model, and year and then options will pop up
+        - User can select their car:
+            - Pull MPG from API and use that for calculations
+- Saved trips
+    - User can save their favorite trips
+- Auto suggested trips:
+    - Based on previous use times/calculations, developing an algorithm to recommend what trips to look at
+- Suggesting different (more carbon-efficent options)
+    - User will be suggested popups such as bus / train alternatives + the cost of those trips 
+         - Perhaps implement average cost on driving as well to show how public transport could be a better alternative
 
 ### App Evaluation
 - **Category:** Educational

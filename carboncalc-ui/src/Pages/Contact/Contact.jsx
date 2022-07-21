@@ -21,6 +21,7 @@ import {
   } from '@chakra-ui/react';
   import { BsPerson } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { GroundOverlay } from '@react-google-maps/api';
 
   export default function Contact() {
     const { hasCopied, onCopy } = useClipboard('example@example.com');
