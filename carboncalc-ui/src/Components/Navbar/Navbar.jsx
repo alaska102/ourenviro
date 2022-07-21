@@ -18,7 +18,7 @@ export default function Navbar() {
           <Link to="/map" className="nav-link">Map</Link>
           <Link to="/vehicles" className="nav-link">Vehicles</Link>
           <Link to="/signin" className="nav-link">Sign In</Link>
-          <Link to="/signup" className="nav-link">Sign Up</Link>
+          <Link to="/signup" className="signup">Sign Up</Link>
         </div>
       </div>
     </div>

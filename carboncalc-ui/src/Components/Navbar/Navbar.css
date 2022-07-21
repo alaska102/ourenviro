@@ -1,39 +1,45 @@
 .navbar {
-    color: #75704E;
-    height: 92px;
-    background-color: white;
-    position: absolute;
-    z-index: 500;
-    border-bottom: 12px solid #A7CECB;
-    width: 100vw;
-    display: flex;
+  color: #75704E;
+  height: 92px;
+  background-color: white;
+  position: absolute;
+  z-index: 500;
+  border-bottom: 12px solid #A7CECB;
+  width: 100vw;
+  display: flex;
 
-  }
+}
 
-  .logo{
-    max-width: 92px;
-  
-  }
+.logo{
+  max-width: 92px;
 
-  .container {
-    margin-left: 36vw;
-    width: 60vw;
-    display: flex;
-    justify-content: space-evenly;
+}
 
-  }
-  .nav-link {
-    font-weight: 550;
-    cursor: pointer;
-    
-  }
-  
-  .nav-content {
-    max-width: 100vw;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-  }
+.container {
+  margin-left: 36vw;
+  width: 60vw;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 550;
 
 
-  
+}
+.nav-link {
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.nav-content {
+  max-width: 100vw;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.signup {
+  background: #75704E;
+  color: white;
+  padding: 8px 12px 8px 12px;
+  border-radius: 8px;
+  align-items: center;
+}
