@@ -7,12 +7,10 @@
   border-bottom: 12px solid #A7CECB;
   width: 100vw;
   display: flex;
-
 }
 
 .logo{
   max-width: 92px;
-
 }
 
 .container {
@@ -21,8 +19,6 @@
   display: flex;
   justify-content: space-evenly;
   font-weight: 550;
-
-
 }
 .nav-link {
   cursor: pointer;

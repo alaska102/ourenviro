@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
 
-export const haileyTheme = extendTheme({
+export const mainPageTheme = extendTheme({
   colors: {
     brand: {
       50: "#8BA6A9",
